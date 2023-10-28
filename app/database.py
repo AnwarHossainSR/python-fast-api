@@ -6,9 +6,9 @@ from psycopg2.extras import RealDictCursor
 import time
 from .config import settings
 
-# SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 
-SQLALCHEMY_DATABASE_URL = f'postgresql://postgres:admin@localhost/fastapi_blog'
+# SQLALCHEMY_DATABASE_URL = f'postgresql://admin:password@localhost/fastapi_blog'
 
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
@@ -22,8 +22,10 @@ def get_db():
     db = SessionLocal()
     try:
         yield db
+        print("Database connection was succesfull!")
     finally:
         db.close()
+        print("Database connection was closed!")
 
 
 # while True:
