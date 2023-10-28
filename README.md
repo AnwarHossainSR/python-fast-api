@@ -64,7 +64,7 @@ Start the development server:
 
 ```
 
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 
 ```
 
@@ -72,7 +72,7 @@ This will create any new tables or columns that are required by the database sch
 
 ## Usage
 
-To use the API, open a web browser and navigate to `http://localhost:8000/`. You will see a list of all of the available endpoints.
+To use the API, open a web browser and navigate to `http://localhost:8000/docs`. You will see a list of all of the available endpoints.
 
 To make a request to an endpoint, click on the "Try it out" button and enter the required parameters. Then, click on the "Execute" button.
 
