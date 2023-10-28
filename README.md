@@ -1,4 +1,3 @@
-```
 # FastAPI Project
 
 This is a FastAPI project using Python 3.11, PostgreSQL, and Git.
@@ -53,7 +52,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=
 
 ```
 
-Migrate the database:
+To migrate the database, run the following command:
 
 ```
 
@@ -68,14 +67,6 @@ Start the development server:
 uvicorn main:app --reload
 
 ```
-
-## Database Migration
-
-To migrate the database, run the following command:
-
-```
-
-alembic upgrade head
 
 This will create any new tables or columns that are required by the database schema, and update any existing tables or columns.
 
